@@ -1,0 +1,454 @@
+@import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer tailwind-base, primereact, tailwind-utilities;
+
+/* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
+
+@layer tailwind-base {
+    @tailwind base;
+}
+
+@layer tailwind-utilities {
+    @tailwind components;
+    @tailwind utilities;
+}
+
+body {
+    background-color: var(--body-background-color) !important;
+}
+
+/*:root {*/
+/*    --toggle-theme-button-bg: #ededed;*/
+/*    --toggle-theme-button-color: var(--black-color);*/
+
+/*    --input-text-color-default: black;*/
+/*    --input-placeholder-color: #888888;*/
+/*    --modal-input-bg-color: white;*/
+
+/*    --body-background-color: var(--white-color);*/
+/*    --auto-scroll-button-border-color: #005e0c;*/
+/*    --auto-scroll-button-background-color: forestgreen;*/
+/*    --auto-scroll-button-box-shadow: black 0 3px 10px;*/
+/*    --table-table-data-th-shadow: none;*/
+/*    --cell-btn-color: black;*/
+/*    --container-nf-background: linear-gradient(34deg, rgba(56, 129, 32, 1) 39%, rgba(230, 22, 22, 0.8407738095238095) 80%);*/
+/*    --scrollbarBg: rgba(2, 142, 74, 1);*/
+/*    --scrollbarThumb: rgba(255, 255, 255, 0.8);*/
+
+/*    --card-tags-border-color: rgba(229, 245, 255, 1);*/
+/*    --card-tags-shadow: none;*/
+/*    --card-tags-background: white;*/
+/*    --card-center-background: white;*/
+/*    --card-header-background: linear-gradient(180deg, rgba(229, 245, 255, 1) 0%, rgba(255, 255, 255, 1) 86%);*/
+/*    --card-header-color: #363636;*/
+/*    --card-footer-background: linear-gradient(0deg, rgba(229, 245, 255, 1) 0%, rgba(255, 255, 255, 1) 86%);*/
+/*    --td-active-hover-border-color: #888888;*/
+/*    --td-active-hover-background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 16%, rgba(206, 206, 206, 0.27) 52%, rgba(244, 244, 244, 0.42) 82%, rgba(255, 255, 255, 0.21) 91%, rgba(255, 255, 255, 0) 100%);*/
+/*    --td-active-active-background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 16%, rgba(206, 206, 206, 0.27) 52%, rgba(244, 244, 244, 0.42) 82%, rgba(255, 255, 255, 0.21) 91%, rgba(255, 255, 255, 0) 100%);*/
+/*    --td-active-active-border-color: white;*/
+/*    --td-active-pressed-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);*/
+/*    --thead-box-shadow: 1px 0 1px 1px #888;*/
+/*    --scrollbarWidth: 12px;*/
+/*    --scrollbarBorder: 3px solid var(--scrollbarBg);*/
+/*    --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);*/
+
+/*    --bs-dropdown-link-active-bg: palegreen;*/
+/*    --navbar-background-color: #ffffff;*/
+/*    --navbar-border-bottom: solid grey thin;*/
+/*    --navbar-box-shadow: 1px 0 1px 1px #888;*/
+/*    --navbar-dropdown-item-active-background-color: #c5f0be;*/
+/*    --black-color: #000000;*/
+/*    --navbar-text-focus-color: #e8e6e6;*/
+/*    --white-color: white;*/
+/*    --nav-link-not-disabled-focus-background: #00c665;*/
+/*    --nav-link-focus-background-color: #005e0c;*/
+/*    --nav-link-not-disabled-focus-color: #ffffff;*/
+/*    --dropdown-menu-background-color: ghostwhite;*/
+/*    --navbar-text-focus-background-color: #bebebe;*/
+
+/*    --pagination-li-page-link: #03c686;*/
+/*    --pagination-background-color: #fff;*/
+/*    --pagination-li-page-link-border-color: #03c686;*/
+/*    --pagination-li-a-page-link-hover-box-shadow: inset 0 0 6px 1px #039f84;*/
+/*    --pagination-li-page-link-background-color: white;*/
+/*    --pagination-li-a-page-link-background-color: #03c686;*/
+/*    --pagination-li-a-page-link-color: white;*/
+/*    --pagination-li-a-page-link-border-color: #03c686;*/
+/*    --pagination-li-a-page-link-box-shadow: inset 0 0 5px 1px #005e0c;*/
+
+/*    --table-table-data-th-color: white;*/
+/*    --table-table-data-td-border-color: #dee2e6;*/
+/*    --table-data-th-background: #02a579;*/
+/*    --table-table-data-td-color: #363636;*/
+/*    --table-table-data-tr-verbose-background-color: ghostwhite;*/
+/*    --tr-failed-background-color: #ffd8d8;*/
+/*    --tr-warning-background-color: #fffacd;*/
+/*    --tr-passed-background-color: #deffdc;*/
+/*    --tr-hover-background-color: #bdd8ff;*/
+/*    --tr-passed-hover-background-color: #beffbe;*/
+/*    --tr-warning-hover-background-color: #fffbb6;*/
+/*    --tr-failed-hover-background-color: #ffbcc1;*/
+/*    --tr-verbose-hover-background-color: #e4e4ee;*/
+/*    --tr-blue-background-color: #bdd8ff;*/
+/*    --tr-blue-hover-background-color: #96bef6;*/
+
+/*    --label-check-input-span-bg: #01b41f;*/
+/*    --label-check-span-color: #fff;*/
+/*    --label-check-span-unchecked-text-color: black;*/
+
+/*    --tbl-container-background: radial-gradient(circle, rgba(151, 255, 118, 1) 0%, rgba(215, 255, 203, 1) 72%, rgba(255, 255, 255, 1) 100%);*/
+/*    --tbl-content-border: rgba(255, 255, 255, 0.3);*/
+
+/*    --tag-item-background: #017A73;*/
+/*    --tag-item-close-background: rgb(48, 48, 48);*/
+/*    --tag-item-close-color: white;*/
+/*    --tag-item-text-color: white;*/
+
+/*    --text-axis-color: #666;*/
+/*    --chart-area-line-color: #1E90FF;*/
+/*    --chart-dot-line-color: rgb(17, 255, 0);*/
+/*    --chart-dot-fill-color: #1E90FF;*/
+/*    --chart-area-gradient: url(#areaGradient);*/
+
+/*    --button-primary-background: rgba(33, 203, 0, 0.4);*/
+/*    --button-primary-border: rgb(25, 134, 84);*/
+/*    --button-success-background: rgb(20, 117, 0);*/
+/*    --button-success-border: rgb(25, 134, 84);*/
+/*    --button-danger-background: rgb(154, 0, 41);*/
+/*    --button-danger-border: rgb(121, 0, 0);*/
+
+/*    --suites-list-bg-color: white;*/
+/*    --search-accordion-bg: aliceblue;*/
+/*    --search-accordion-bg-hover: #d7f1ff;*/
+/*    --search-card-bg: #f8fdff;*/
+
+/*    !*JSON*!*/
+/*    --w-rjv-color: #9cdcfe;*/
+/*    --w-rjv-background-color: transparent;*/
+/*    --w-rjv-line-color: #ffeaea;*/
+/*    --w-rjv-arrow-color: #005288;*/
+/*    --w-rjv-edit-color: #0184a6;*/
+/*    --w-rjv-add-color: #0184a6;*/
+/*    --w-rjv-delete-color: #dc3545;*/
+/*    --w-rjv-info-color: #656565;*/
+/*    --w-rjv-update-color: #ebcb8b;*/
+/*    --w-rjv-copied-color: #0117a6;*/
+/*    --w-rjv-copied-success-color: #28a745;*/
+
+/*    --w-rjv-key-number: #0117a6;*/
+/*    --w-rjv-quotes-color: #5965c7;*/
+/*    --w-rjv-quotes-string-color: #d33682;*/
+/*    --w-rjv-curlybraces-color: #888888;*/
+/*    --w-rjv-colon-color: #505050;*/
+/*    --w-rjv-brackets-color: #5e5e5e;*/
+
+/*    --w-rjv-type-string-color: #d00000;*/
+/*    --w-rjv-type-int-color: #1c15ef;*/
+/*    --w-rjv-type-float-color: #00a912;*/
+/*    --w-rjv-type-bigint-color: #268bd2;*/
+/*    --w-rjv-type-boolean-color: #0011ff;*/
+/*    --w-rjv-type-date-color: #586e75;*/
+/*    --w-rjv-type-url-color: #0969da;*/
+/*    --w-rjv-type-nan-color: #859900;*/
+/*    --w-rjv-type-undefined-color: #586e75;*/
+/*    --w-rjv-type-null-color: #d33682;*/
+/*    --w-rjv-type-set-color: #268bd2;*/
+/*    --w-rjv-type-map-color: #268bd2;*/
+
+/*    !*XML*!*/
+/*    --xml-attribute-key-color: #2a7ab0;*/
+/*    --xml-attribute-value-color: #008000;*/
+/*    --xml-cdata-color: #1D781D;*/
+/*    --xml-comment-color: #aaa;*/
+/*    --xml-separator-color: #333;*/
+/*    --xml-tag-color: #d43900;*/
+/*    --xml-text-color: #333;*/
+/*}*/
+
+/*Dark*/
+:root {
+    --main-dark: rgba(33, 37, 41, 1);
+    --toggle-theme-button-bg: #555a5f;
+    --toggle-theme-button-color: var(--black-color);
+
+    --input-text-color-default: black;
+    --input-placeholder-color: var(--black-color);
+    --modal-input-bg-color: #cecece;
+
+    --body-background-color: #555a5f;
+    --cell-btn-color: #cecece;
+    --auto-scroll-button-border-color: rgb(29, 30, 32);
+    --auto-scroll-button-background-color: rgb(4, 84, 43);
+    --auto-scroll-button-box-shadow: var(--black-color) 0 3px 10px;
+    --container-nf-background: linear-gradient(34deg, rgb(104, 243, 60) 39%, rgba(230, 22, 22, 0.8407738095238095) 80%);
+
+    --scrollbarBg: rgb(4, 84, 43);
+    --scrollbarThumb: rgba(35, 35, 35, 0.8);
+    --card-tags-border-color: rgb(82, 81, 86);
+    --card-tags-shadow: 0 0 2px 1px rgb(29, 30, 32);
+    --card-tags-background: rgb(82, 81, 86);
+    --card-header-background: linear-gradient(180deg, rgb(82, 81, 86) 0%, rgb(220, 220, 220) 100%);
+    --card-header-color: rgb(29, 30, 32);
+    --card-footer-background: linear-gradient(0deg, rgb(82, 81, 86) 0%, rgb(220, 220, 220) 100%);
+    --card-center-background: rgb(220, 220, 220);
+    --td-active-hover-border-color: #cccccc;
+    --td-active-hover-background: linear-gradient(127deg, rgba(255, 255, 255, 0) 0%, rgba(200, 200, 200, 0.27354691876750703) 35%, rgba(222, 222, 222, 0.23993347338935578) 59%, rgba(255, 255, 255, 0) 100%);
+    --td-active-active-background: linear-gradient(77deg, rgba(255, 255, 255, 0) 0%, rgba(200, 200, 200, 0.27354691876750703) 35%, rgba(222, 222, 222, 0.23993347338935578) 59%, rgba(255, 255, 255, 0) 100%);
+    --td-active-active-border-color: rgba(213, 213, 213, 0.51);
+    --td-active-pressed-box-shadow: inset 0 0 10px 0 rgba(239, 239, 239, 0.5);
+    --thead-box-shadow: 1px 0 1px 1px #888;
+    --scrollbarBorder: 3px solid var(--scrollbarBg);
+
+    --bs-dropdown-link-active-bg: #3a603a;
+    --navbar-background-color: #3f4044;
+    --navbar-border-bottom: solid rgb(29, 30, 32) thin;
+    --navbar-box-shadow: 1px 0 1px 1px rgb(29, 30, 32);
+    --navbar-dropdown-item-active-background-color: #c5f0be;
+    --black-color: #b5b9b1;
+    --navbar-text-focus-color: rgb(29, 30, 32);
+    --white-color: #e1e1e1;
+    --nav-link-not-disabled-focus-background: #fdd001;
+    --nav-link-focus-background-color: #ffdf71;
+    --nav-link-not-disabled-focus-color: rgb(29, 30, 32);
+    --dropdown-menu-background-color: #74757a;
+    --navbar-text-focus-background-color: #fdd001;
+
+    --pagination-li-page-link: rgb(29, 30, 32);
+    --pagination-background-color: var(--body-background-color);
+    --pagination-li-page-link-border-color: #c4c3c1;
+    --pagination-li-page-link-background-color: #3f4044;
+    --pagination-li-a-page-link-hover-box-shadow: inset 0 0 6px 1px #cbcbcb;
+    --pagination-li-a-page-link-color: rgb(29, 30, 32);
+    --pagination-li-a-page-link-background-color: #dedede;
+    --pagination-li-a-page-link-border-color: #c4c3c1;
+    --pagination-li-a-page-link-box-shadow: inset 0 0 5px 1px #33485d;
+    --table-table-data-th-color: #b5b9b1;
+    --table-table-data-td-border-color: rgb(29, 30, 32);
+    --table-table-data-th-shadow: 0px -2px 2px -0.5px rgb(29, 30, 32);
+    --table-data-th-background: #3f4044;
+    --table-table-data-td-color: #e8e8e8;
+    --table-table-data-tr-verbose-background-color: #74757a;
+
+    --tr-failed-background-color: #804044;
+    --tr-warning-background-color: #726200;
+    --tr-passed-background-color: #387541;
+    --tr-passed-hover-background-color: #468851;
+    --tr-hover-background-color: #43629f;
+    --tr-blue-background-color: #43629f;
+    --tr-blue-hover-background-color: #6880b6;
+
+    --tr-warning-hover-background-color: #8a7802;
+    --tr-failed-hover-background-color: #985056;
+    --tr-verbose-hover-background-color: #8b8b8f;
+
+    --label-check-input-span-bg: #387541;
+    --label-check-span-color: var(--white-color);
+    --label-check-span-unchecked-text-color: black;
+
+    --tbl-container-background: radial-gradient(circle, rgb(202, 239, 186) 0%, rgba(215, 255, 203, 1) 72%, rgba(255, 255, 255, 1) 100%);
+    --tbl-content-border: rgba(68, 68, 68, 0.3);
+
+    --tag-item-background: #fdd001;
+    --tag-item-close-background: rgb(29, 30, 32);
+    --tag-item-close-color: #a9a9a9;
+    --tag-item-text-color: rgb(42, 42, 44);
+
+    --text-axis-color: #fff;
+    --chart-area-line-color: red;
+    --chart-area-gradient: url(#areaGradientDark);
+    --chart-dot-line-color: black;
+    --chart-dot-fill-color: red;
+
+    --button-primary-background: #43629f;
+    --button-primary-border: rgb(29, 30, 32);
+    --button-success-background: rgb(29, 122, 45);
+    --button-success-border: rgb(29, 122, 45);
+    --button-danger-background: #ce212b;
+    --button-danger-border: #ce212b;
+    --suite-list-bg-color: #444648;
+    --search-accordion-bg: #3f4044;
+    --search-accordion-bg-hover: #464649;
+    --search-card-bg: #3f4044;
+    /*JSON*/
+    --w-rjv-key-string: #e0e0e0;
+    --w-rjv-font-family: monospace;
+    --w-rjv-color: #9cdcfe;
+    --w-rjv-background-color: transparent;
+    --w-rjv-line-color: #36334280;
+    --w-rjv-arrow-color: #838383;
+    --w-rjv-edit-color: var(--w-rjv-color);
+    --w-rjv-info-color: #9c9c9c7a;
+    --w-rjv-update-color: #9cdcfe;
+    --w-rjv-copied-color: #9cdcfe;
+    --w-rjv-copied-success-color: #28a745;
+
+    --w-rjv-key-number: #569cd6;
+    --w-rjv-quotes-color: #adb1d2;
+    --w-rjv-quotes-string-color: #d33682;
+    --w-rjv-curlybraces-color: #d4d4d4;
+    --w-rjv-colon-color: #d4d4d4;
+    --w-rjv-brackets-color: #d4d4d4;
+    --w-rjv-type-string-color: #f8b6a2;
+    --w-rjv-type-int-color: #b5cea8;
+    --w-rjv-type-float-color: #b5cea8;
+    --w-rjv-type-bigint-color: #b5cea8;
+    --w-rjv-type-boolean-color: #569cd6;
+    --w-rjv-type-date-color: #b5cea8;
+    --w-rjv-type-url-color: #3b89cf;
+    --w-rjv-type-null-color: #569cd6;
+    --w-rjv-type-nan-color: #859900;
+    --w-rjv-type-undefined-color: #569cd6;
+    --w-rjv-type-set-color: #abcfec;
+    --w-rjv-type-map-color: #abcfec;
+
+    /*XML*/
+    --xml-attribute-key-color: #b9b8b8;
+    --xml-attribute-value-color: #b3baf8;
+    --xml-cdata-color: #1D781D;
+    --xml-comment-color: #aaa;
+    --xml-separator-color: #ffdbdb;
+    --xml-tag-color: #f8b6a2;
+    --xml-text-color: #d2d2d2;
+}
+
+/*body.theme-dark {*/
+/*    --toggle-theme-button-bg: var(--dark-toggle-theme-button-bg);*/
+/*    --toggle-theme-button-color: var(--dark-toggle-theme-button-color);*/
+
+/*    --input-text-color-default: var(--dark-input-text-color-default);*/
+/*    --input-placeholder-color: var(--input-placeholder-color);*/
+/*    --modal-input-bg-color: var(--dark-modal-input-bg-color);*/
+/*    --body-background-color: var(--dark-body-background-color);*/
+/*    --auto-scroll-button-border-color: var(--dark-auto-scroll-button-border-color);*/
+/*    --auto-scroll-button-background-color: var(--dark-auto-scroll-button-background-color);*/
+/*    --auto-scroll-button-box-shadow: var(--dark-auto-scroll-button-box-shadow);*/
+
+/*    --cell-btn-color: var(--dark-cell-btn-color);*/
+/*    --container-nf-background: var(--dark-container-nf-background);*/
+
+/*    --table-table-data-td-border-color: var(--dark-table-table-data-td-border-color);*/
+/*    --table-table-data-th-shadow: var(--dark-table-table-data-th-shadow);*/
+/*    --scrollbarBg: var(--dark-scrollbarBg);*/
+/*    --scrollbarThumb: var(--dark-scrollbarThumb);*/
+/*    --card-center-background: var(--dark-card-center-background);*/
+/*    --card-tags-shadow: var(--dark-card-tags-shadow);*/
+/*    --card-tags-border-color: var(--dark-card-tags-border-color);*/
+/*    --card-tags-background: var(--dark-card-tags-background);*/
+/*    --card-header-background: var(--dark-card-header-background);*/
+/*    --card-header-color: var(--dark-card-header-color);*/
+/*    --card-footer-background: var(--dark-card-footer-background);*/
+/*    --td-active-hover-border-color: var(--dark-td-active-hover-border-color);*/
+/*    --td-active-hover-background: var(--dark-td-active-hover-background);*/
+/*    --td-active-active-background: var(--dark-td-active-active-background);*/
+/*    --td-active-active-border-color: var(--dark-td-active-active-border-color);*/
+/*    --td-active-pressed-box-shadow: var(--dark-td-active-pressed-box-shadow);*/
+/*    --thead-box-shadow: var(--dark-thead-box-shadow);*/
+/*    --scrollbarBorder: var(--dark-scrollbarBorder);*/
+
+/*    --bs-dropdown-link-active-bg: var(--dark-bs-dropdown-link-active-bg);*/
+/*    --navbar-background-color: var(--dark-navbar-background-color);*/
+/*    --navbar-border-bottom: var(--dark-navbar-border-bottom);*/
+/*    --navbar-box-shadow: var(--dark-navbar-box-shadow);*/
+/*    --navbar-dropdown-item-active-background-color: var(--dark-navbar-dropdown-item-active-background-color);*/
+/*    --black-color: var(--dark-black-color);*/
+/*    --navbar-text-focus-color: var(--dark-navbar-text-focus-color);*/
+/*    --white-color: var(--dark-white-color);*/
+/*    --nav-link-not-disabled-focus-color: var(--dark-nav-link-not-disabled-focus-color);*/
+/*    --nav-link-not-disabled-focus-background: var(--dark-nav-link-not-disabled-focus-background);*/
+/*    --nav-link-focus-background-color: var(--dark-nav-link-focus-background-color);*/
+/*    --dropdown-menu-background-color: var(--dark-dropdown-menu-background-color);*/
+/*    --navbar-text-focus-background-color: var(--dark-navbar-text-focus-background-color);*/
+
+/*    --pagination-li-page-link: var(--dark-pagination-li-page-link);*/
+/*    --pagination-background-color: var(--dark-pagination-background-color);*/
+/*    --pagination-li-page-link-border-color: var(--dark-pagination-li-page-link-border-color);*/
+/*    --pagination-li-a-page-link-hover-box-shadow: var(--dark-pagination-li-a-page-link-hover-box-shadow);*/
+/*    --pagination-li-page-link-background-color: var(--dark-pagination-li-page-link-background-color);*/
+/*    --pagination-li-a-page-link-background-color: var(--dark-pagination-li-a-page-link-background-color);*/
+/*    --pagination-li-a-page-link-color: var(--dark-pagination-li-a-page-link-color);*/
+/*    --pagination-li-a-page-link-border-color: var(--dark-pagination-li-a-page-link-border-color);*/
+/*    --pagination-li-a-page-link-box-shadow: var(--dark-pagination-li-a-page-link-box-shadow);*/
+
+/*    --table-table-data-th-color: var(--dark-table-table-data-th-color);*/
+/*    --table-data-th-background: var(--dark-table-data-th-background);*/
+/*    --table-table-data-td-color: var(--dark-table-table-data-td-color);*/
+/*    --table-table-data-tr-verbose-background-color: var(--dark-table-table-data-tr-verbose-background-color);*/
+/*    --tr-failed-background-color: var(--dark-tr-failed-background-color);*/
+/*    --tr-warning-background-color: var(--dark-tr-warning-background-color);*/
+/*    --tr-passed-background-color: var(--dark-tr-passed-background-color);*/
+/*    --tr-hover-background-color: var(--dark-tr-hover-background-color);*/
+/*    --tr-passed-hover-background-color: var(--dark-tr-passed-hover-background-color);*/
+/*    --tr-warning-hover-background-color: var(--dark-tr-warning-hover-background-color);*/
+/*    --tr-failed-hover-background-color: var(--dark-tr-failed-hover-background-color);*/
+/*    --tr-verbose-hover-background-color: var(--dark-tr-verbose-hover-background-color);*/
+/*    --tr-blue-background-color: var(--dark-tr-blue-background-color);*/
+/*    --tr-blue-hover-background-color: var(--dark-tr-blue-hover-background-color);*/
+
+/*    --label-check-input-span-bg: var(--dark-label-check-input-span-bg);*/
+/*    --label-check-span-color: var(--dark-label-check-span-color);*/
+/*    --label-check-span-unchecked-text-color: var(--dark-label-check-span-unchecked-text-color);*/
+/*    --tbl-container-background: var(--dark-tbl-container-background);*/
+/*    --tbl-content-border: var(--dark-tbl-content-border);*/
+/*    --tag-item-background: var(--dark-tag-item-background);*/
+/*    --tag-item-close-background: var(--dark-tag-item-close-background);*/
+/*    --tag-item-close-color: var(--dark-tag-item-close-color);*/
+/*    --tag-item-text-color: var(--dark-tag-item-text-color);*/
+
+/*    --text-axis-color: var(--dark-text-axis-color);*/
+/*    --chart-area-line-color: var(--dark-chart-area-line-color);*/
+/*    --chart-area-gradient: var(--dark-chart-area-gradient);*/
+/*    --chart-dot-line-color: var(--dark-chart-dot-line-color);*/
+/*    --chart-dot-fill-color: var(--dark-chart-dot-fill-color);*/
+
+/*    --button-primary-background: var(--dark-button-primary-background);*/
+/*    --button-primary-border: var(--dark-button-primary-border);*/
+/*    --button-success-background: var(--dark-button-success-background);*/
+/*    --button-success-border: var(--dark-button-success-border);*/
+/*    --button-danger-background: var(--dark-button-danger-background);*/
+/*    --button-danger-border: var(--dark-button-danger-border);*/
+/*    --suites-list-bg-color: var(--dark-suite-list-bg-color);*/
+/*    --search-accordion-bg: var(--dark-search-accordion-bg);*/
+/*    --search-accordion-bg-hover: var(--dark-search-accordion-bg-hover);*/
+/*    --search-card-bg: var(--dark-search-card-bg);*/
+/*    !*JSON*!*/
+/*    --w-rjv-color: var(--dark-w-rjv-color);*/
+/*    --w-rjv-background-color: var(--dark-w-rjv-background-color);*/
+/*    --w-rjv-line-color: var(--dark-w-rjv-line-color);*/
+/*    --w-rjv-arrow-color: var(--dark-w-rjv-arrow-color);*/
+/*    --w-rjv-edit-color: var(--dark-w-rjv-edit-color);*/
+/*    --w-rjv-info-color: var(--dark-w-rjv-info-color);*/
+/*    --w-rjv-update-color: var(--dark-w-rjv-update-color);*/
+/*    --w-rjv-copied-color: var(--dark-w-rjv-copied-color);*/
+/*    --w-rjv-copied-success-color: var(--dark-w-rjv-copied-success-color);*/
+
+/*    --w-rjv-quotes-color: var(--dark-w-rjv-quotes-color);*/
+/*    --w-rjv-quotes-string-color: var(--dark-w-rjv-quotes-string-color);*/
+/*    --w-rjv-curlybraces-color: var(--dark-w-rjv-curlybraces-color);*/
+/*    --w-rjv-colon-color: var(--dark-w-rjv-colon-color);*/
+/*    --w-rjv-brackets-color: var(--dark-w-rjv-brackets-color);*/
+/*    --w-rjv-key-string: var(--dark-w-rjv-key-string);*/
+/*    --w-rjv-type-string-color: var(--dark-w-rjv-type-string-color);*/
+/*    --w-rjv-type-int-color: var(--dark-w-rjv-type-int-color);*/
+/*    --w-rjv-type-float-color: var(--dark-w-rjv-type-float-color);*/
+/*    --w-rjv-type-bigint-color: var(--dark-w-rjv-type-bigint-color);*/
+/*    --w-rjv-type-boolean-color: var(--dark-w-rjv-type-boolean-color);*/
+/*    --w-rjv-type-date-color: var(--dark-w-rjv-type-date-color);*/
+/*    --w-rjv-type-url-color: var(--dark-w-rjv-type-url-color);*/
+/*    --w-rjv-type-nan-color: var(--dark-w-rjv-type-nan-color);*/
+/*    --w-rjv-type-undefined-color: var(--dark-w-rjv-type-undefined-color);*/
+/*    --w-rjv-type-null-color: var(--dark-w-rjv-type-null-color);*/
+/*    --w-rjv-type-set-color: var(--dark-w-rjv-type-set-color);*/
+/*    --w-rjv-type-map-color: var(--dark-w-rjv-type-map-color);*/
+/*    --w-rjv-key-number: var(--dark-w-rjv-key-number);*/
+/*    --xml-attribute-key-color: var(--dark-xml-attribute-key-color);*/
+/*    --xml-attribute-value-color: var(--dark-xml-attribute-value-color);*/
+/*    --xml-cdata-color: var(--dark-xml-cdata-color);*/
+/*    --xml-comment-color: var(--dark-xml-comment-color);*/
+/*    --xml-separator-color: var(--dark-xml-separator-color);*/
+/*    --xml-tag-color: var(--dark-xml-tag-color);*/
+/*    --xml-text-color: var(--dark-xml-text-color);*/
+/*}*/

@@ -1,0 +1,66 @@
+2023-12-28T12:56:24.2459514+03:00  [INF] Now listening on: "https://localhost:7159" (d826f4b8)
+2023-12-28T12:56:24.2494189+03:00  [INF] Now listening on: "http://localhost:5204" (d826f4b8)
+2023-12-28T12:56:24.2528692+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2023-12-28T12:56:24.2540960+03:00  [INF] Hosting environment: "Production" (bc5a1a4e)
+2023-12-28T12:56:24.2551453+03:00  [INF] Content root path: "D:\Repositories\autotests\aux_libs\cs\Magic\Magic" (cc26f24e)
+2023-12-28T12:56:39.7964426+03:00 0HN07HD0781RB:00000001 [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT l.id, l.description, l.name
+FROM labs AS l" (0723d8ff)
+2023-12-28T12:56:39.8247254+03:00 0HN07HD0781RD:00000001 [INF] Executed DbCommand ("57"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM runs AS r" (0723d8ff)
+2023-12-28T12:56:39.9128172+03:00 0HN07HD0781RB:00000001 [INF] Request method "GET" "/Labs/Grouped" duration - 1276ms (933f8285)
+2023-12-28T12:56:39.9792895+03:00 0HN07HD0781RD:00000001 [INF] Executed DbCommand ("48"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.build_number, t.end_date, t.failed, t.jenkins_build_id, t.lab_id, t.passed, t.path_to_logs, t.scenario_id, t.skipped, t.start_date, t.status, t.total, t.warning, s.id, s.description, s.name, l.id, l.description, l.name
+FROM (
+    SELECT r.id, r.build_number, r.end_date, r.failed, r.jenkins_build_id, r.lab_id, r.passed, r.path_to_logs, r.scenario_id, r.skipped, r.start_date, r.status, r.total, r.warning
+    FROM runs AS r
+    ORDER BY r.id DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t
+INNER JOIN scenarios AS s ON t.scenario_id = s.id
+INNER JOIN labs AS l ON t.lab_id = l.id
+ORDER BY t.id DESC" (0723d8ff)
+2023-12-28T12:56:40.0878900+03:00 0HN07HD0781RD:00000001 [INF] Request method "GET" "/Runs/All" duration - 1088ms (933f8285)
+2023-12-28T12:56:41.8014980+03:00 0HN07HD0781RC:00000001 [INF] Executed DbCommand ("2,034"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.build_number
+FROM (
+    SELECT DISTINCT r.build_number
+    FROM runs AS r
+) AS t
+ORDER BY t.build_number DESC
+LIMIT @__p_0" (0723d8ff)
+2023-12-28T12:56:41.8078032+03:00 0HN07HD0781RC:00000001 [INF] Request method "GET" "/Builds/Names" duration - 3165ms (933f8285)
+2023-12-28T12:57:46.3747676+03:00  [INF] Now listening on: "https://localhost:7159" (d826f4b8)
+2023-12-28T12:57:46.3807905+03:00  [INF] Now listening on: "http://localhost:5204" (d826f4b8)
+2023-12-28T12:57:46.3859488+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2023-12-28T12:57:46.3874697+03:00  [INF] Hosting environment: "Production" (bc5a1a4e)
+2023-12-28T12:57:46.3946056+03:00  [INF] Content root path: "D:\Repositories\autotests\aux_libs\cs\Magic\Magic" (cc26f24e)
+2023-12-28T12:58:01.4752303+03:00 0HN07HDOP2NDV:00000001 [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT l.id, l.description, l.name
+FROM labs AS l" (0723d8ff)
+2023-12-28T12:58:01.5076503+03:00 0HN07HDOP2NE1:00000001 [INF] Executed DbCommand ("61"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM runs AS r" (0723d8ff)
+2023-12-28T12:58:01.5875632+03:00 0HN07HDOP2NDV:00000001 [INF] Request method "GET" "/Labs/Grouped" duration - 1390ms (933f8285)
+2023-12-28T12:58:01.6140739+03:00 0HN07HDOP2NE1:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.build_number, t.end_date, t.failed, t.jenkins_build_id, t.lab_id, t.passed, t.path_to_logs, t.scenario_id, t.skipped, t.start_date, t.status, t.total, t.warning, s.id, s.description, s.name, l.id, l.description, l.name
+FROM (
+    SELECT r.id, r.build_number, r.end_date, r.failed, r.jenkins_build_id, r.lab_id, r.passed, r.path_to_logs, r.scenario_id, r.skipped, r.start_date, r.status, r.total, r.warning
+    FROM runs AS r
+    ORDER BY r.id DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t
+INNER JOIN scenarios AS s ON t.scenario_id = s.id
+INNER JOIN labs AS l ON t.lab_id = l.id
+ORDER BY t.id DESC" (0723d8ff)
+2023-12-28T12:58:01.7251997+03:00 0HN07HDOP2NE1:00000001 [INF] Request method "GET" "/Runs/All" duration - 1152ms (933f8285)
+2023-12-28T12:58:03.3302008+03:00 0HN07HDOP2NE0:00000001 [INF] Executed DbCommand ("1,884"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.build_number
+FROM (
+    SELECT DISTINCT r.build_number
+    FROM runs AS r
+) AS t
+ORDER BY t.build_number DESC
+LIMIT @__p_0" (0723d8ff)
+2023-12-28T12:58:03.3366904+03:00 0HN07HDOP2NE0:00000001 [INF] Request method "GET" "/Builds/Names" duration - 3110ms (933f8285)

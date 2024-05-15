@@ -1,0 +1,57 @@
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContextPool<TestRunsDbContext>(o =>
+{
+    o.UseNpgsql(config.GetSection("Database").Get<DatabaseConfiguration>().ConnectionString);
+    o.LogTo(l => Debug.WriteLine(l), LogLevel.Information);
+});
+builder.Services
+    .AddRepositories()
+    .AddCustomServices();
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContextPool<TestRunsDbContext>(o =>
+{
+    o.UseNpgsql(config.GetSection("Database").Get<DatabaseConfiguration>().ConnectionString);
+    o.LogTo(l => Debug.WriteLine(l), LogLevel.Information);
+});
+builder.Services
+    .AddRepositories()
+    .AddCustomServices();
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+UseHttpsRedirection()
+app.UseStaticFiles();
+app.UseRouting();
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContextPool<TestRunsDbContext>(o =>
+{
+    o.UseNpgsql(config.GetSection("Database").Get<DatabaseConfiguration>().ConnectionString);
+    o.LogTo(l => Debug.WriteLine(l), LogLevel.Information);
+});
+builder.Services
+    .AddRepositories()
+    .AddCustomServices();
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+UseHttpsRedirection()
+app.UseStaticFiles();
+app.UseRouting();
