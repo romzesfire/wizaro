@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Magic.DAL;
 
-public class SampleContextFactory : IDesignTimeDbContextFactory<QuestionsDbContext>
+public class SampleContextFactory : IDesignTimeDbContextFactory<MagicDbContext>
 {
-    public QuestionsDbContext CreateDbContext(string[] args)
+    public MagicDbContext CreateDbContext(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<QuestionsDbContext>();
+        var optionsBuilder = new DbContextOptionsBuilder<MagicDbContext>();
 
         ConfigurationBuilder builder = new ConfigurationBuilder();
         builder.AddJsonFile("appsettings.DAL.json");
@@ -15,6 +15,6 @@ public class SampleContextFactory : IDesignTimeDbContextFactory<QuestionsDbConte
 
         string connectionString = config.GetSection("Database:ConnectionString").Value;
         optionsBuilder.UseNpgsql(connectionString);
-        return new QuestionsDbContext(optionsBuilder.Options);
+        return new MagicDbContext(optionsBuilder.Options);
     }
 }

@@ -14,9 +14,14 @@
         <PackageReference Include="AutoMapper" Version="12.0.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+        <PackageReference Include="Npgsql" Version="8.0.3" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+        <PackageReference Include="Npgsql.NodaTime" Version="8.0.3" />
+        <PackageReference Include="Refit" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="IdentityModels\Commands\" />
       <Folder Include="Interfaces\Editors" />
       <Folder Include="Model\RequestModels" />
       <Folder Include="Model\ResponseModel\Pagination" />

@@ -16,7 +16,7 @@ var config = new ConfigurationBuilder()
     .Build();
 
 builder.Services.AddControllers();
-builder.Services.AddDbContextPool<QuestionsDbContext>(o =>
+builder.Services.AddDbContextPool<MagicDbContext>(o =>
 {
     o.UseNpgsql(config.GetSection("Database").Get<DatabaseConfiguration>().ConnectionString);
     o.LogTo(l => Debug.WriteLine(l), LogLevel.Information);

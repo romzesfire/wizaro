@@ -7,6 +7,20 @@
 }
 
 @font-face {
+    font-family: "Indira K";
+    src: local("Indira K"),
+    url("../../Fonts/Indira_K.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Sweet Mavka";
+    src: local("Sweet Mavka"),
+    url("../../Fonts/Sweet Mavka Script.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
     font-family: "Favorit Grotesk";
     src: local("Favorit Grotesk"),
     url("../../Fonts/Favorit Grotesk.ttf") format("truetype");
@@ -170,7 +184,7 @@ body {
     position: relative;
     width: 30%;
     border-radius: 0;
-    height: 200px;
+    height: 260px;
 }
 
 @keyframes card-main {
@@ -387,20 +401,20 @@ p.quote {
 }
 
 .main-text-up-header {
-    font-family: "Conkordia", serif;
+    font-family: "Indira K", serif;
     color: var(--navbar-text-focus-background-color);
     font-size: 50px;
 }
 
 .main-text-header {
-    font-family: "Conkordia", serif;
+    font-family: "Indira K", serif;
     margin-top: 20px;
-    color: var(--navbar-text-focus-background-color);
-    font-size: 50px;
+    color: var(--black-color);
+    font-size: 58px;
 }
 
 .main-text-description {
-    font-family: "Favorit Grotesk", serif;
+    font-family: "Sweet Mavka", serif;
     margin-top: 25px;
     font-size: 30px;
     color: whitesmoke;
@@ -409,7 +423,7 @@ p.quote {
 .options-text-header {
     font-family: "Conkordia", serif;
     margin-top: -20px;
-    color: var(--main-dark);
+    color: black;
     font-size: 50px;
 }
 
@@ -439,7 +453,7 @@ p.quote {
 }
 
 .blog-img-container {
-    width: 90%;
+    width: 40%;
     background-image: url('../../img/blog-a.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -463,7 +477,7 @@ p.quote {
 }
 
 .options-container-main {
+    margin-top: 40px;
     width: 90%;
-    border: 2px solid var(--main-dark);
     background: rgba(33, 37, 41, 0.4);
 }

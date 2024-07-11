@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Repository", "Magic.R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Service", "Magic.Service\Magic.Service.csproj", "{D4C103EE-2D42-42A0-8F4C-1EED5B5C8E17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Tests", "Magic.Tests\Magic.Tests.csproj", "{4E3D254E-ABA8-4FEF-A59E-ABC5DED232DD}"
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Magic.Client", "Magic.Client\Magic.Client.esproj", "{0D283919-E9D2-405A-8DFB-053F4E382A35}"
 EndProject
 Global
@@ -49,10 +47,6 @@ Global
 		{D4C103EE-2D42-42A0-8F4C-1EED5B5C8E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4C103EE-2D42-42A0-8F4C-1EED5B5C8E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4C103EE-2D42-42A0-8F4C-1EED5B5C8E17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E3D254E-ABA8-4FEF-A59E-ABC5DED232DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E3D254E-ABA8-4FEF-A59E-ABC5DED232DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E3D254E-ABA8-4FEF-A59E-ABC5DED232DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E3D254E-ABA8-4FEF-A59E-ABC5DED232DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D283919-E9D2-405A-8DFB-053F4E382A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D283919-E9D2-405A-8DFB-053F4E382A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D283919-E9D2-405A-8DFB-053F4E382A35}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

@@ -18,7 +18,7 @@ function MainPage(props) {
         <div>
             <div className='main-bg-image'>
                 <h4 className='main-text-header'>Приоткрой завесу судьбы</h4>
-                <h5 className='main-text-description'>Закажите простой расклад от опытного таролога по супернизкой
+                <h5 className='main-text-description'>Простой расклад от опытного таролога по супернизкой
                     цене!</h5>
             </div>
             <div className='main-shadow'/>
